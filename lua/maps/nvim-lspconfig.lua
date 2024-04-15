@@ -1,0 +1,16 @@
+return function(event)
+          local map = function(keys, func, desc)
+            vim.keymap.set('n', keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
+          end
+          map('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
+          map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
+          map('gi', vim.lsp.buf.implementation, '[G]oto [D]efinition')
+          map('gt', vim.lsp.buf.type_definition, '[G]oto [T]ype definition')
+          map('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
+          map('<M-k>', vim.lsp.buf.signature_help, 'Display Help Signature')
+          map('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
+          map('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
+          map('<leader>R', vim.lsp.buf.rename, '[R]ename')
+          map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
+          map('K', vim.lsp.buf.hover, 'Hover Documentation')
+        end
