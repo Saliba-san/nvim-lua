@@ -13,6 +13,7 @@ require('lazy').setup({
     require('plugins/categories/notetaking'),
 
     -- Individual plugins
+    require('plugins/nvim-tree'),
     require('plugins/gitsigns'),
     require('plugins/telescope'),
     require('plugins/nvim-lspconfig'),

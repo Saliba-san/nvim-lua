@@ -3,6 +3,34 @@ return {
         opts = {
             load = {
                 ["core.defaults"] = {}, -- Loads default behaviour
+                ["core.highlights"] = {
+                    config = {
+                        highlights = {
+                            headings = {
+                                [1] = {
+                                    prefix = '+PurpleBold',
+                                    title = '+PurpleBold',
+                                },
+                                [2] = {
+                                    prefix = '+OrangeBold',
+                                    title = '+OrangeBold',
+                                },
+                                [3] = {
+                                    title = '+YellowBold',
+                                    prefix = '+YellowBold',
+                                },
+                                [4] = {
+                                    title = '+RedBold',
+                                    prefix = 'None',
+                                },
+                                [5] = {
+                                    title = '+AquaBold',
+                                    prefix = '+AquaBold',
+                                },
+                            }
+                        }
+                    }
+                },
                 ["core.concealer"] = {}, -- Adds pretty icons to your documents
                 ["core.dirman"] = { -- Manages Neorg workspaces
                     config = {

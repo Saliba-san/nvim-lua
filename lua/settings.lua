@@ -27,6 +27,7 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.smartindent = true
 vim.opt.smartcase = true
+vim.opt.linebreak = true
 vim.opt.undodir = vim.fn.expand('$HOME/.config/nvim/undodir')
 
 vim.g.tex_flavor = 'latex'
