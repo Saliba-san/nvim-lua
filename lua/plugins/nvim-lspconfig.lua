@@ -9,6 +9,7 @@ return { -- LSP Configuration & Plugins
       -- `neodev` configures Lua LSP for your Neovim config, runtime and plugins
       -- used for completion, annotations and signatures of Neovim apis
       { 'folke/neodev.nvim', opts = {} },
+      { 'folke/trouble.nvim', opts = { { use_diagnostic_signs = true } } },
     },
     config = function()
       vim.api.nvim_create_autocmd('LspAttach', {

@@ -1,5 +1,9 @@
 return {
     'ekickx/clipboard-image.nvim',
+    cmd = "PasteImg",
+    keys = {
+        {"<leader>P", "<cmd>PasteImg<cr>", mode = {"v","n"}, desc = "Pastes image from clipboard"},
+    },
     opts = {
         ['norg'] = {
             img_dir = os.getenv("HOME") .. '/Org/Images',
@@ -24,7 +28,11 @@ return {
                     local name = vim.fn.input('Image Name: ')
                     vim.fn.inputrestore()
                     local filename = vim.fn.expand('%:t:r')
-                    return filename .. "_" .. name
+                    if name == nil or name == '' then
+                        return filename .. "_" .. os.date('%Y-%m-%d-%H-%M-%S')
+                    else
+                        return filename .. "_" .. name
+                    end
                 end
             end,
             img_handler = function(img)

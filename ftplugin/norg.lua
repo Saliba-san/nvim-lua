@@ -9,4 +9,4 @@ vim.keymap.set('n', '$', 'g$')
 
 vim.opt.number = false
 vim.opt.relativenumber = false
-vim.opt.foldcolumn = '1'
+vim.opt.foldcolumn = '2'

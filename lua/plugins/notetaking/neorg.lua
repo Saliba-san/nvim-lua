@@ -1,5 +1,10 @@
 return {
         "nvim-neorg/neorg",
+        keys = {
+            {"<leader>N", "<cmd>Neorg workspace wiki<cr>", mode = "n", desc = "Goes to default workspace"},
+        },
+        cmd = "Neorg",
+        ft = { "norg", "neorg" },
         opts = {
             load = {
                 ["core.defaults"] = {}, -- Loads default behaviour
@@ -82,7 +87,7 @@ return {
             { "nvim-lua/plenary.nvim", },
             { "nvim-treesitter/nvim-treesitter" },
         },
-        lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
+        lazy = true, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
         version = "*", -- Pin Neorg to the latest stable release
         config = true,
     }

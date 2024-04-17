@@ -8,18 +8,24 @@ require('maps/globalmaps')
 require('install_lazy')
 
 require('lazy').setup({
-    -- Bundle of plugins
-    require('plugins/categories/style'),
-    require('plugins/categories/notetaking'),
+    -- Style Plugins
+    require('plugins/style/colorscheme'),
+    require('plugins/style/statusline'),
+    require('plugins/style/fluff'),
+
+    -- Notetaking plugins
+    require('plugins/notetaking/neorg'),
+    require('plugins/notetaking/image-nvim'),
+    require('plugins/notetaking/clipboard-image'),
+    require('plugins/notetaking/diagrams'),
+    require('plugins/notetaking/markdown-preview'),
 
     -- Individual plugins
-    require('plugins/nvim-tree'),
-    require('plugins/gitsigns'),
+    require('plugins/neo-tree'),
     require('plugins/telescope'),
     require('plugins/nvim-lspconfig'),
     require('plugins/nvim-cmp'),
     require('plugins/nvim-treesitter'),
-    require('plugins/markdown-preview'),
     require('plugins/luarocks'),
 },
     {

@@ -14,5 +14,7 @@ return {
                 ["<tab>"] = { "open", nowait = false, },
             }
         }
-    }
+    },
+    cmd = 'Neotree',
+    lazy = true,
 }
