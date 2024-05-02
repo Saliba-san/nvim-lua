@@ -32,6 +32,10 @@ return {
                                     title = '+AquaBold',
                                     prefix = '+AquaBold',
                                 },
+                                [6] = {
+                                    title = '+GreenBold',
+                                    prefix = '+GreenBold',
+                                },
                             }
                         }
                     }

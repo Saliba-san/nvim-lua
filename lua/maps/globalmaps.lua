@@ -47,3 +47,6 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 -- Start Plugins
 vim.keymap.set('n', '<leader>n', '<cmd>Neotree toggle<CR>', { desc = 'Opens Neo-tree'} )
+
+-- Telescope
+vim.keymap.set('n', '<leader>sp', '<cmd>Telescope projects<CR>', { desc = '[S]earch for [P]rojects'} )

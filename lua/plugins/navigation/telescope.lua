@@ -16,6 +16,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
       -- Extensions
       { 'nvim-telescope/telescope-ui-select.nvim' },
       { 'dharmx/telescope-media.nvim' },
+      { 'ahmedkhalf/project.nvim' },
     },
     config = function()
       -- [[ Configure Telescope ]]
@@ -47,6 +48,9 @@ return { -- Fuzzy Finder (files, lsp, etc)
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
           },
+          ['projects'] = {
+            require'telescope'.extensions.projects,
+          },
         },
       }
 
@@ -54,6 +58,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
       pcall(require('telescope').load_extension, 'fzf')
       pcall(require('telescope').load_extension, 'ui-select')
       pcall(require('telescope').load_extension, 'media')
+      pcall(require('telescope').load_extension, 'projects')
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
@@ -96,5 +101,6 @@ return { -- Fuzzy Finder (files, lsp, etc)
       vim.keymap.set('n', '<leader>sn', function()
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
       end, { desc = '[S]earch [N]eovim files' })
+
     end,
   }

@@ -20,9 +20,12 @@ require('lazy').setup({
     require('plugins/notetaking/diagrams'),
     require('plugins/notetaking/markdown-preview'),
 
+    -- Navigation plugins
+    require('plugins/navigation/neo-tree'),
+    require('plugins/navigation/telescope'),
+    require('plugins/navigation/project'),
+
     -- Individual plugins
-    require('plugins/neo-tree'),
-    require('plugins/telescope'),
     require('plugins/nvim-lspconfig'),
     require('plugins/nvim-cmp'),
     require('plugins/nvim-treesitter'),
@@ -32,3 +35,4 @@ require('lazy').setup({
         ui = {icons = {}},
     }
 )
+
