@@ -12,5 +12,5 @@ return {
         opts = {
           signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`
         }
-    }
+    },
 }

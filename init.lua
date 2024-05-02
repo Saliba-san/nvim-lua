@@ -12,6 +12,8 @@ require('lazy').setup({
     require('plugins/style/colorscheme'),
     require('plugins/style/statusline'),
     require('plugins/style/fluff'),
+    require('plugins/style/trouble'),
+    require('plugins/style/incline'),
 
     -- Notetaking plugins
     require('plugins/notetaking/neorg'),
@@ -30,6 +32,7 @@ require('lazy').setup({
     require('plugins/nvim-cmp'),
     require('plugins/nvim-treesitter'),
     require('plugins/luarocks'),
+    require('plugins/treesj'),
 },
     {
         ui = {icons = {}},
