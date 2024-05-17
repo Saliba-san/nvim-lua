@@ -1,8 +1,14 @@
 return {
     'b0o/incline.nvim',
+    opts = {},
     config = function()
         local devicons = require 'nvim-web-devicons'
         require('incline').setup {
+            window = {
+                margin = {
+                    vertical = 0
+                }
+            },
             render = function(props)
                 local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ':t')
                 if filename == '' then

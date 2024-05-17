@@ -27,12 +27,16 @@ require('lazy').setup({
     require('plugins/navigation/telescope'),
     require('plugins/navigation/project'),
 
+    -- Editor Plugins
+    require('plugins/editor/nvim-various-textobjs'),
+    require('plugins/editor/treesj'),
+
     -- Individual plugins
     require('plugins/nvim-lspconfig'),
+    require('plugins/nvim-dap'),
     require('plugins/nvim-cmp'),
     require('plugins/nvim-treesitter'),
     require('plugins/luarocks'),
-    require('plugins/treesj'),
 },
     {
         ui = {icons = {}},
