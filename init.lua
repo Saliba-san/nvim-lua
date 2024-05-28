@@ -17,10 +17,7 @@ require('lazy').setup({
 
     -- Notetaking plugins
     require('plugins/notetaking/neorg'),
-    require('plugins/notetaking/image-nvim'),
-    require('plugins/notetaking/clipboard-image'),
     require('plugins/notetaking/diagrams'),
-    require('plugins/notetaking/markdown-preview'),
 
     -- Navigation plugins
     require('plugins/navigation/neo-tree'),
