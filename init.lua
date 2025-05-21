@@ -26,10 +26,12 @@ require('lazy').setup({
     require('plugins/navigation/neo-tree'),
     require('plugins/navigation/telescope'),
     require('plugins/navigation/project'),
+    require('plugins/navigation/toggleterm'),
 
     -- Editor Plugins
     require('plugins/editor/nvim-various-textobjs'),
     require('plugins/editor/treesj'),
+    require('plugins/editor/chatgpt'),
 
     -- Individual plugins
     require('plugins/nvim-lspconfig'),
@@ -37,6 +39,7 @@ require('lazy').setup({
     require('plugins/nvim-cmp'),
     require('plugins/nvim-treesitter'),
     require('plugins/luarocks'),
+    require('plugins/tidal'),
 },
     {
         ui = {icons = {}},

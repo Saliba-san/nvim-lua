@@ -1,7 +1,7 @@
 return {
     "folke/trouble.nvim",
     keys = {
-        {"cq", "<cmd>TroubleToggle document_diagnostics<cr>", mode={'v','n'}},
+        {"<leader>q", "<cmd>TroubleToggle document_diagnostics<cr>", mode={'n'}},
     },
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {

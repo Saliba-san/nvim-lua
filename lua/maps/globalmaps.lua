@@ -25,11 +25,16 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 --  Terminal
-vim.keymap.set('t', '<ESC><ESC>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-vim.keymap.set('t', '<C-h>', '<C-\\><C-n><C-h>', { desc = 'Move focus to the left window on terminal' })
-vim.keymap.set('t', '<C-l>', '<C-\\><C-n><C-l>', { desc = 'Move focus to the right window on terminal' })
-vim.keymap.set('t', '<C-j>', '<C-\\><C-n><C-j>', { desc = 'Move focus to the lower window on terminal' })
-vim.keymap.set('t', '<C-k>', '<C-\\><C-n><C-k>', { desc = 'Move focus to the upper window on terminal' })
+function _G.set_terminal_keymaps()
+  local opts = {buffer = 0}
+  vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
+  vim.keymap.set('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
+  vim.keymap.set('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
+  vim.keymap.set('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
+  vim.keymap.set('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
+  vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]], opts)
+end
+vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 -- Tabs
 vim.keymap.set('', '<M-t>', '<cmd>tabnew<cr>', { desc = 'Create new tab' })

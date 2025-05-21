@@ -24,6 +24,7 @@ return { -- LSP Configuration & Plugins
       local servers = {
         clangd = {},
         jedi_language_server = {},
+        java_language_server = {},
         vimls = {},
         texlab = {},
         bashls = {},
