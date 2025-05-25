@@ -32,6 +32,7 @@ require('lazy').setup({
     require('plugins/editor/nvim-various-textobjs'),
     require('plugins/editor/treesj'),
     require('plugins/editor/chatgpt'),
+    require('plugins/editor/git'),
 
     -- Individual plugins
     require('plugins/nvim-lspconfig'),
